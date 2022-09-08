@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
-import './App.css';
-import FeedbackOptions from './components/FeedbackOptions';
-import Statistics from './components/Statistics';
-import Section from './components/Section';
+import React, { Component } from "react";
+import "./App.css";
+import FeedbackOptions from "./components/FeedbackOptions";
+import Statistics from "./components/Statistics";
+import Section from "./components/Section";
+import Notification from "./components/Notification";
 
 class App extends Component {
   state = {
@@ -11,8 +12,8 @@ class App extends Component {
     bad: 0,
   };
 
-  onHendleClick = name => {
-    this.setState(prevState => ({
+  onHendleClick = (name) => {
+    this.setState((prevState) => ({
       [name.toLowerCase()]: prevState[name.toLowerCase()] + 1,
     }));
   };
@@ -45,7 +46,7 @@ class App extends Component {
         </Section>
         <Section title="Statistics">
           {sumAllFeedback === 0 ? (
-            <p>No feedback given</p>
+            <Notification text="No feedback given" />
           ) : (
             <Statistics
               good={good}
