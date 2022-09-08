@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class FeedbackOptions extends Component {
   render() {
@@ -13,7 +13,7 @@ class FeedbackOptions extends Component {
             type="button"
             onClick={() => this.props.onBtnClick(option)}
           >
-            {option}
+            {option.toUpperCase()}
           </button>
         ))}
       </div>

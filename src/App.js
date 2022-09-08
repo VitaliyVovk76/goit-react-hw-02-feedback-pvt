@@ -14,7 +14,7 @@ class App extends Component {
 
   onHendleClick = (name) => {
     this.setState((prevState) => ({
-      [name.toLowerCase()]: prevState[name.toLowerCase()] + 1,
+      [name]: prevState[name] + 1,
     }));
   };
 
